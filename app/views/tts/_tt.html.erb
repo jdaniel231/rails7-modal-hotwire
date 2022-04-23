@@ -1,0 +1,47 @@
+<div id="<%= dom_id tt %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= tt.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Status:</strong>
+    <%= tt.status %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= tt.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Message:</strong>
+    <%= tt.message %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Id company:</strong>
+    <%= tt.id_company %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Holiday:</strong>
+    <%= tt.holiday %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Start date:</strong>
+    <%= tt.start_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">End date:</strong>
+    <%= tt.end_date %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this tt", tt, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this tt', edit_tt_path(tt), data: {turbo_frame: 'modal' }, class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
